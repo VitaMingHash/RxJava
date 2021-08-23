@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
         Observable.create(new ObservableOnSubscribe<String>() {
             @Override
-            public void subscribe(ObservableEmitter<String> emitter) {
+            public void subscribe(Emitter<String> emitter) {
                 emitter.onNext("123");
             }
         }).subscribe(new Observer<String>() {

@@ -4,8 +4,9 @@ package com.ming;
  * @author Ming
  * 8/23/21
  */
-public abstract class Observable<T> {
+public abstract class Observable<T> implements ObservableSource<T>{
 
+    @Override
     public void subscribe(Observer<T> observer) {
         subscribeActual(observer);
     }

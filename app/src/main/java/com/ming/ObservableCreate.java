@@ -1,7 +1,5 @@
 package com.ming;
 
-import android.util.Log;
-
 /**
  * @author Ming
  * 8/23/21
@@ -25,7 +23,7 @@ public class ObservableCreate<T> extends Observable<T> {
         createEmitter.onComplete();
     }
 
-    public class CreateEmitter<T> implements ObservableEmitter<T>{
+    public class CreateEmitter<T> implements Emitter<T> {
         private Observer<T> observer;
         public CreateEmitter(Observer<T> observer){
             this.observer = observer;
